@@ -1,7 +1,7 @@
 # Topic Title
 ![](url for an image about your topic)
 
-A short description / abstract of the topic you choose. For the text here and below, feel free to use **bold** and *italic* fonts, [linked texts](url),  ![images](url), or any other element you think would be helpful for your audience to understand the topic.
+A short description / abstract of the topic you choose. For the text here and below, feel free to use **bold** and *italic* fonts, [linked texts](url),  ![images](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png), or any other element you think would be helpful for your audience to understand the topic.
 
 
 ## Section 1
