@@ -1,0 +1,12 @@
+body {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  background-color: black;
+  background-image: url('./2k_stars.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
