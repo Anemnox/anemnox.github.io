@@ -1,19 +1,24 @@
 body {
   margin: 0px;
-  height: 100%;
   width: 100%;
 }
 
 main {
-  background-image: url('./2k_stars.jpeg');
+  background-image: url('./2k_stars.jpeg');/**/
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 200vh;
 }
 
 .earth-container {
   position: relative;
-  /*overflow: hidden;*/
-  height: 100%;
   width: 100%;
+  height: 130vh;
+  overflow: hidden;
+}
+
+.earth {
+  position: absolute;
+  top: -100px;
+  right: -500px;
 }

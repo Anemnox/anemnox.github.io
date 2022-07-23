@@ -160,6 +160,3 @@ sketch
 
 # ignore these
 public/*
-
-# dont ignore this
-!public/static

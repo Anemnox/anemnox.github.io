@@ -1,0 +1,59 @@
+.terminal {
+  position: absolute;
+  background-color: #000011;
+  border-radius: 5px;
+  font-size: 1.3em;
+  opacity: 0.9;
+  color: #11ee11;
+  box-shadow: 5px 5px teal;
+  min-width: 500px;
+  transition: all 0.25s ease-out;
+}
+
+.terminal:not(:focus-within) {
+  opacity: 0.6;
+}
+
+.terminal-head {
+  width: calc(100% - 10px);
+  padding: 0px 5px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 5px 5px 0px 0px;
+  color: #002222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggleButton {
+
+}
+
+.terminal-body {
+  padding: 5px;
+  overflow-y: auto;
+  height: calc(100% - 40px);
+}
+
+.terminal-body > div {
+  overflow-wrap: break-word;
+}
+
+.terminal-input-wrapper {
+  display: flex;
+}
+
+.terminal-input {
+  box-sizing: border-box;
+  border: 0 solid;
+  font: inherit;
+  color: inherit;
+  font-size: inherit;
+  background: inherit;
+  flex-grow: 1;
+}
+
+.terminal-input:focus {
+  outline: none;
+}

@@ -12,6 +12,10 @@ import atmosphereFragment from "./shaders/atmosphereFragment.glsl";
 import cloudVertex from "./shaders/cloudVertex.glsl";
 import cloudFragment from "./shaders/cloudFragment.glsl";
 
+import globeImage from './images/2k_earth_daymap.jpeg';
+import nightImage from './images/2k_earth_nightmap.jpeg';
+import cloudImage from './images/2k_earth_clouds.jpeg';
+
 import "./earthModel.css";
 
 const mouseDat = {
@@ -27,9 +31,7 @@ const Earth = ({rotX, rotY}) => {
     nightTexture,
     cloudTexture
   ] = useLoader(THREE.TextureLoader, [
-    './static/8k_earth_daymap.jpeg',
-    './static/8k_earth_nightmap.jpeg',
-    './static/2k_earth_clouds.jpeg'
+    globeImage, nightImage, cloudImage
   ]);
 
   const earthRef = useRef();
@@ -97,7 +99,7 @@ const Earth = ({rotX, rotY}) => {
   )
 }
 
-const EarthModel = ({styleName, height, width }) => {
+const EarthModel = ({ styleName, height, width }) => {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
 
