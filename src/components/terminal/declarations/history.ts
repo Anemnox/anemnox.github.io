@@ -2,6 +2,6 @@ import type UserData from "./userData";
 import type TerminalOutput from "./TerminalOutput";
 
 export default interface History extends UserData {
-  input: String,
+  input: string,
   output: TerminalOutput | null
 }

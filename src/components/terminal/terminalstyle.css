@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap');
+
 .terminal {
   position: absolute;
   background-color: #000011;
   border-radius: 5px;
-  font-size: 1.3em;
+  font-size: 1em;
+  font-weight: 300;
   opacity: 0.9;
-  color: #11ee11;
-  box-shadow: 5px 5px teal;
+  color: #ffffff;
+  box-shadow: 4px 4px  teal;
   min-width: 500px;
   transition: all 0.25s ease-out;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .terminal:not(:focus-within) {

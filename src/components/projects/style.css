@@ -1,0 +1,41 @@
+.projects {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.project-list {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.project-card {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  width: 300px;
+  height: 400px;
+  background: white;
+  box-shadow: 1px 1px 5px grey;
+  margin: 20px;
+  vertical-align: top;
+}
+
+.project-card-image {
+  display: flex;
+  height: 175px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-card h3 {
+  padding: 0px 20px;
+  font-size: 1.5em;
+}
+
+.project-card p {
+  padding: 0px 20px;
+  font-size: 0.8em;
+}

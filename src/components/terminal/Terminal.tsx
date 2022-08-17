@@ -27,10 +27,10 @@ const fullStyle = {
 }
 
 const halfStyle = {
-  left: "5%",
+  left: "20%",
   top: "20vh",
-  width: "50%",
-  height: "60vh"
+  width: "60%",
+  height: "48vh"
 }
 
 const Terminal = (): JSX.Element => {
@@ -108,12 +108,12 @@ const Terminal = (): JSX.Element => {
       onClick={handleClick}
       style={isFullScreen ? fullStyle : halfStyle}
     >
-    <div className="terminal-head" onClick={toggleFullScreen}>
-      Terminal
-      <span className="toggleButton">
-        {isFullScreen ? "<" : ">"}
-      </span>
-    </div>
+      <div className="terminal-head" onClick={toggleFullScreen}>
+        Terminal
+        <span className="toggleButton">
+          {isFullScreen ? "<" : ">"}
+        </span>
+      </div>
       <div className="terminal-body">
         {renderTerminalHistory(history)}
         {renderInput()}
