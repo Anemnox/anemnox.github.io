@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap');
+
+.tagline {
+  position: relative;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  padding: 240px 0px;
+  font-family: 'Roboto Mono', monospace;
+
+/*  font-family: 'Cutive Mono', monospace;*/
+  color: green;
+  z-index: 100;
+}
+
+.tagline-subtext {
+  font-size: 2em;
+}
+
+.tagline-maintext {
+  display: block;
+  padding: 20px;
+  font-size: 5em;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .tagline {
+      width: 90%;
+    }
+}

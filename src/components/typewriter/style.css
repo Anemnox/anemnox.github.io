@@ -1,8 +1,7 @@
 /*source: https://css-tricks.com/snippets/css/typewriter-effect/*/
 
-.typewriter {
-  color: green;
-  white-space: pre-wrap;
+.typewriter-span {
+
 }
 
 .cursor {

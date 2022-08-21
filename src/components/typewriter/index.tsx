@@ -5,35 +5,39 @@ import "./style.css";
 type TypeWriterProps = {
   className: string | undefined,
   text: string,
-  speed: number
+  speed: number,
+  callback: Function | undefined,
+  isReversed: boolean | undefined,
 }
 
 const TypeWriter = (props: TypeWriterProps): JSX.Element => {
   const [index, setIndex] = useState(0);
   const indexRef = useRef(index);
-  const length = props.text.length;
+  let length = props.text.length;
 
   useEffect(() => {
+    length = props.text.length;
+    setIndex(0);
+    indexRef.current = 0;
     const timer = setInterval(() => {
-      if(index < length - 1) {
+      if(indexRef.current < length) {
         setIndex(indexRef.current + 1);
         indexRef.current += 1;
       } else {
+        props.callback?.();
         clearInterval(timer);
       }
     }, props.speed);
     return (() => {
       clearInterval(timer);
     });
-  }, []);
+  }, [props]);
 
   return (
-    <div className={"typewriter " + props.className}>
-      <span>
-        {props.text.substring(0, index)}
-        <span className="cursor"></span>
-      </span>
-    </div>
+    <span className={"typewriter-span " + props.className}>
+      {props.isReversed ? props.text.substring(0, length - index) : props.text.substring(0, index)}
+      <span className="cursor"></span>
+    </span>
   );
 }
 

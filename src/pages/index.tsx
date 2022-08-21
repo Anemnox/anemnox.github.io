@@ -8,7 +8,7 @@ import { getImage } from 'gatsby-plugin-image'
 
 import Navbar from "../components/navbar";
 import EarthModel from "../components/earth/EarthModel";
-import TypeWriter from "../components/typewriter";
+import TagLine from "../components/tagline";
 //import Terminal from "../components/terminal/Terminal";
 import About from "../components/about";
 import Projects from "../components/projects";
@@ -51,18 +51,14 @@ const IndexPage = (): JSX.Element => {
       }
     }
   `);
-
+  
   return (
     <>
       <Navbar />
       <section className="home">
         <div className="earth-container">
-          <TypeWriter
-            className="tagline"
-            text={`Welcome!\nMy name is Andrew!`}
-            speed={100}/>
-            <EarthModel styleName="earth" height={1200} width={1200} />
-
+          <TagLine />
+          <EarthModel styleName="earth" height={1200} width={1200} />
         </div>
       </section>
       <About />

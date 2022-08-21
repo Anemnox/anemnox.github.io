@@ -17,7 +17,10 @@ export const About = (): JSX.Element => {
         <p>
           I'm a software developer with a skillset in front-end development. I
           graduated from the University of Washington with a bachelors degree in Geography,
-          specialized in data science and spatial analysis. While developing skills
+          specialized in data science and spatial analysis.
+        </p>
+        <p>
+          While developing skills
           in research and data science in geography, I studied software development
           through personal projects and contributing to the development of the robot
           control system for the Underwater Remotely Operated Vehicles (UWROV) team at UW.
