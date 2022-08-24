@@ -6,7 +6,7 @@ import "./style.css";
 
 export const About = (): JSX.Element => {
   return (
-    <section className="about">
+    <section id="about">
       <div className="profile-image">
         <StaticImage
           src="./profile.jpeg"

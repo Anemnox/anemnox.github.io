@@ -1,0 +1,17 @@
+#contact {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-content {
+  display: inline-block;
+  height: 200px;
+  width: 40%;
+}
+
+.contact-links {
+  display: inline-block;
+  height: 200px;
+  width: 40%;
+}

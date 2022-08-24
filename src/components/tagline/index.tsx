@@ -13,6 +13,7 @@ type AnimDat = {
 }
 
 const INTERESTS: string[] = [
+    `GEOGRAPHY`,
     `SOFTWARE DEVELOPMENT`,
     `DATA SCIENCE`,
     `MATH`,
@@ -28,23 +29,23 @@ const TAGLINE_DATA: AnimDat[] = [
     delay: 100,
     isReversed: false
   },
-  ...INTERESTS.reduce((r, e) => {
-    r.push(
-        {
-        text: e,
-        className: "tagline-maintext",
-        speed: 100,
-        delay: 1000,
-        isReversed: false
-      },
-      {
-        text: e,
-        className: "tagline-maintext",
-        speed: 100,
-        delay: 1000,
-        isReversed: true
-      }
-    );
+  ...INTERESTS.reduce<AnimDat[]>((r, e) => {
+    const typeIn: AnimDat = {
+      text: e,
+      className: "tagline-maintext",
+      speed: 100,
+      delay: 1000,
+      isReversed: false
+    }
+    const typeOut: AnimDat = {
+      text: e,
+      className: "tagline-maintext",
+      speed: 100,
+      delay: 1000,
+      isReversed: true
+    }
+    r.push(typeIn, typeOut);
+
     return r;
   }, [])
 ]
@@ -53,7 +54,7 @@ const TagLine = (): JSX.Element => {
   const [index, setIndex]: [number, Function] = useState(0);
   const indexRef = useRef(index);
 
-  const updateTagLine = (delay) => {
+  const updateTagLine = (delay: number): void => {
     let newIndex = indexRef.current + 1;
     if(newIndex >= TAGLINE_DATA.length) {
       newIndex = 1;
@@ -64,7 +65,7 @@ const TagLine = (): JSX.Element => {
     }, delay);
   }
 
-  const renderTagLine = (): JSX.ELement => {
+  const renderTagLine = (): JSX.Element => {
     const dat = TAGLINE_DATA[indexRef.current];
     const subtextDat = TAGLINE_DATA[0];
 

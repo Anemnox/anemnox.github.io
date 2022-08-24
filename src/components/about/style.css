@@ -1,5 +1,5 @@
-.about {
-  padding: 350px 50px;
+#about {
+  padding: 300px 50px;
   background: rgba(255,255,255,1);
   width: 80%;
   height: 80%;
@@ -9,7 +9,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .about {
+    #about {
       flex-direction: column;
       text-align: center;
     }

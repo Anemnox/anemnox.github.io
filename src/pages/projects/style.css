@@ -1,0 +1,26 @@
+.project-post-container {
+  display: flex;
+  width: 80%;
+  margin: 20vh auto;
+}
+
+.project-post {
+  margin: auto;
+  padding: 50px 100px 50px 0px;
+  text-align: center;
+}
+
+.project-post-image {
+  display: flex;
+  height: 90%;
+  overflow: hidden;
+}
+
+.project-post-image-source {
+  text-align: center;
+}
+
+.project-post-container h1 {
+  font-size: 3em;
+  text-align: center;
+}

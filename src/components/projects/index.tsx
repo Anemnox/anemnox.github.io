@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { GatsbyImage } from 'gatsby-plugin-image'
 
+import useWindowDimensions from "../../tools/useWindowDimensions";
+
 import "./style.css";
 
 type ProjectProps = {
@@ -17,7 +19,17 @@ export type ProjectData = {
   image_alt: string
 }
 
+const minWidth = 360;
+
+const CARD_WIDTH = 340;
+
+const SECTION_WIDTH = 0.8;
+
 export const Projects = (props: ProjectProps): JSX.Element => {
+  const [showAll, setShowAll]: [boolean, Function] = useState(false);
+
+  const {width: screenWidth} = useWindowDimensions();
+
   const projectElement = (data: ProjectData) => {
     return (
       <a className="project-card" href={"/projects" + data.slug} key={data.key}>
@@ -30,14 +42,34 @@ export const Projects = (props: ProjectProps): JSX.Element => {
     );
   }
 
+
+  const numberToShow = Math.floor(
+      ((screenWidth * SECTION_WIDTH) - minWidth) / CARD_WIDTH) + 1;
+
+  let projectItems = props.projects.map(
+    (projectDat) => projectElement(projectDat)
+  );
+
+  let extraItems =
+    (projectItems.length -
+    numberToShow) %
+    numberToShow;
+
+  for (let i = 0; i < extraItems; i++) {
+    projectItems.push((<div className="invis-card"></div>))
+  }
+
   return (
-    <section className="projects">
+    <section id="projects">
       <h2>Projects</h2>
       <hr />
       <div className="project-list">
-        {props.projects.map((projectDat) => (
-          projectElement(projectDat)
-        ))}
+        {
+          showAll ? projectItems : projectItems.slice(0, numberToShow)
+        }
+      </div>
+      <div className="show-hide" onClick={(): void => setShowAll(!showAll)}>
+        {showAll ? "Hide" : "See More"}
       </div>
     </section>
   );

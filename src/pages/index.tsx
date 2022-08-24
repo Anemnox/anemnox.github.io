@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from 'gatsby-plugin-image'
 
 
-import Navbar from "../components/navbar";
+import { MainNav, StickyNav } from "../components/navbar";
 import EarthModel from "../components/earth/EarthModel";
 import TagLine from "../components/tagline";
 //import Terminal from "../components/terminal/Terminal";
@@ -51,16 +51,17 @@ const IndexPage = (): JSX.Element => {
       }
     }
   `);
-  
+
   return (
     <>
-      <Navbar />
-      <section className="home">
+      <MainNav />
+      <section id="home">
         <div className="earth-container">
           <TagLine />
           <EarthModel styleName="earth" height={1200} width={1200} />
         </div>
       </section>
+      <StickyNav />
       <About />
       <Projects projects={convertToProjectData(allMarkdownRemark.nodes)}/>
       <Footer />
