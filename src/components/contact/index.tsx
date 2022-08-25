@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./style.css";
+import './style.css';
 
 export const Contact = (): JSX.Element => {
   return (
@@ -8,17 +8,13 @@ export const Contact = (): JSX.Element => {
       <h1>Contact Me!</h1>
       <hr />
       <div className="contact-content">
-        <p>
-          Feel free to reach out and ask questions!
-        </p>
+        <p>Feel free to reach out and ask questions!</p>
       </div>
       <div className="contact-links">
-        <a href="mailto:a.kyu.jang@gmail.com">
-          a.kyu.jang@gmail.com
-        </a>
+        <a href="mailto:a.kyu.jang@gmail.com">a.kyu.jang@gmail.com</a>
       </div>
     </section>
   );
-}
+};
 
 export default Contact;

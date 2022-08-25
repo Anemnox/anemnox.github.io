@@ -9,13 +9,14 @@ body {
   width: 100%;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
 }
 
 #home {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('./2k_stars.jpeg');/**/
+  background-image: url('./2k_stars.jpeg'); /**/
   background-size: auto;
   background-repeat: repeat-y;
   overflow: hidden;
@@ -23,14 +24,17 @@ body {
 
 .home-transition {
   height: 500px;
-  background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(255,255,255,1));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(255, 255, 255, 1)
+  );
 }
 
 .earth-container {
   position: absolute;
   width: 100%;
   height: 100%;
-
 }
 
 .earth {

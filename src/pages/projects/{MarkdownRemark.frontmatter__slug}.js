@@ -1,14 +1,12 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import React from 'react';
 
-import Footer from "../../components/footer";
+import Footer from '../../components/footer';
+import { StickyNav } from '../../components/navbar';
+import './style.css';
 
-import { StickyNav } from "../../components/navbar";
-
-import "./style.css";
-
-export default function Template({data}) {
+export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const image = getImage(frontmatter.hero_image);
@@ -26,13 +24,10 @@ export default function Template({data}) {
         </div>
         <div className="project-post-image-container">
           <div className="project-post-image">
-            <GatsbyImage
-              image={image}
-              alt={frontmatter.hero_image_alt}
-            />
+            <GatsbyImage image={image} alt={frontmatter.hero_image_alt} />
           </div>
           <p className="project-post-image-source ">
-            Photo Credit:{" "}
+            Photo Credit:{' '}
             <a href={frontmatter.hero_image_credit_link}>
               {frontmatter.hero_image_credit_text}
             </a>
@@ -41,11 +36,11 @@ export default function Template({data}) {
       </section>
       <Footer />
     </>
-  )
+  );
 }
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
@@ -62,4 +57,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

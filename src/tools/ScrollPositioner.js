@@ -1,9 +1,8 @@
-import React from "react";
-
-import { useSpring, animated, config } from "@react-spring/web";
+import { animated, config, useSpring } from '@react-spring/web';
+import React from 'react';
 
 const ScrollPositioner = ({ children }) => {
-  const [flip, set] = React.useState(false)
+  const [flip, set] = React.useState(false);
 
   let scrollStyle = useSpring({
     to: { opacity: 1 },
@@ -14,16 +13,9 @@ const ScrollPositioner = ({ children }) => {
     config: config.molasses,
     onRest: () => set(!flip),
   });
-  let style = {
+  let style = {};
 
-  }
-  
-  return (
-    <animated.div style={{...style}}>
-      {children}
-    </animated.div>
-  );
-}
-
+  return <animated.div style={{ ...style }}>{children}</animated.div>;
+};
 
 export default ScrollPositioner;

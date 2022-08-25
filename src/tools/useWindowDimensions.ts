@@ -1,26 +1,26 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 type InnerDimension = {
-  innerWidth: number,
-  innerHeight: number
+  innerWidth: number;
+  innerHeight: number;
 };
 
 type Dimension = {
-  width: number,
-  height: number
-}
+  width: number;
+  height: number;
+};
 
 function getWindowDimensions(): Dimension {
   const { innerWidth: width, innerHeight: height }: InnerDimension = window;
   return {
     width,
-    height
+    height,
   };
 }
 
 export default function useWindowDimensions(): Dimension {
-  const [windowDimensions, setWindowDimensions]:
-        [Dimension, Function] = useState(getWindowDimensions());
+  const [windowDimensions, setWindowDimensions]: [Dimension, Function] =
+    useState(getWindowDimensions());
 
   useEffect(() => {
     function handleResize(): void {

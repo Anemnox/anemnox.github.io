@@ -1,5 +1,5 @@
-import type TerminalInterface from "./terminalInterface";
+import type TerminalInterface from './terminalInterface';
 
-type Command = ((terminal: TerminalInterface, args: string[]) => boolean);
+type Command = (terminal: TerminalInterface, args: string[]) => boolean;
 
-export default Command
+export default Command;

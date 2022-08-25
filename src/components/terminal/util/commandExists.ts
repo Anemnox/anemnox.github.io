@@ -1,4 +1,4 @@
-import * as commands from "../commands";
+import * as commands from '../commands';
 
 const commandExists = (command: string): boolean => {
   const list = Object.keys(commands);

@@ -1,10 +1,10 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent } from "react";
 
 type EarthModelProps = {
-    styleName: ?string,
-    height: number,
-    width: number
-}
+  styleName: ?string;
+  height: number;
+  width: number;
+};
 
 const EarthModel: FunctionComponent<EarthModelProps>;
 

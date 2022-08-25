@@ -1,33 +1,29 @@
-import * as React from "react";
+import { graphql, useStaticQuery } from 'gatsby';
+import { getImage } from 'gatsby-plugin-image';
+import * as React from 'react';
 
-import type { ProjectData } from "../components/projects";
-
-import { graphql, useStaticQuery } from "gatsby"
-import { getImage } from 'gatsby-plugin-image'
-
-
-import { MainNav, StickyNav } from "../components/navbar";
-import EarthModel from "../components/earth/EarthModel";
-import TagLine from "../components/tagline";
 //import Terminal from "../components/terminal/Terminal";
-import About from "../components/about";
-import Projects from "../components/projects";
-import Footer from "../components/footer";
-
-import "../styles/pageStyle.css";
+import About from '../components/about';
+import EarthModel from '../components/earth/EarthModel';
+import Footer from '../components/footer';
+import { MainNav, StickyNav } from '../components/navbar';
+import type { ProjectData } from '../components/projects';
+import Projects from '../components/projects';
+import TagLine from '../components/tagline';
+import '../styles/pageStyle.css';
 
 type FrontMatter = {
-  slug: string,
-  title: string,
-  desc: string,
-  hero_image: any,
-  hero_image_alt: string
-}
+  slug: string;
+  title: string;
+  desc: string;
+  hero_image: any;
+  hero_image_alt: string;
+};
 
 type MarkdownNodeData = {
-  id: string,
-  frontmatter: FrontMatter
-}
+  id: string;
+  frontmatter: FrontMatter;
+};
 
 // markup
 const IndexPage = (): JSX.Element => {
@@ -37,7 +33,7 @@ const IndexPage = (): JSX.Element => {
         nodes {
           id
           frontmatter {
-    				slug
+            slug
             title
             desc
             hero_image {
@@ -63,11 +59,11 @@ const IndexPage = (): JSX.Element => {
       </section>
       <StickyNav />
       <About />
-      <Projects projects={convertToProjectData(allMarkdownRemark.nodes)}/>
+      <Projects projects={convertToProjectData(allMarkdownRemark.nodes)} />
       <Footer />
     </>
   );
-}
+};
 
 function convertToProjectData(data: MarkdownNodeData[]): ProjectData[] {
   return data.map((node) => {
@@ -78,8 +74,8 @@ function convertToProjectData(data: MarkdownNodeData[]): ProjectData[] {
       description: frontmatter.desc,
       slug: frontmatter.slug,
       image: getImage(frontmatter.hero_image),
-      image_alt: frontmatter.hero_image_alt
-    }
+      image_alt: frontmatter.hero_image_alt,
+    };
   });
 }
 
@@ -87,9 +83,9 @@ export default IndexPage;
 
 export function Head(): JSX.Element {
   return (
-  <>
-    <title>Andrew Jang</title>
-    <meta name="description" content="Andrew Jang's personal website!" />
-  </>
+    <>
+      <title>Andrew Jang</title>
+      <meta name="description" content="Andrew Jang's personal website!" />
+    </>
   );
 }

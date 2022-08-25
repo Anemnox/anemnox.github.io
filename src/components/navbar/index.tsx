@@ -1,2 +1,2 @@
-export * from "./MainNav";
-export * from "./StickyNav";
+export * from './MainNav';
+export * from './StickyNav';

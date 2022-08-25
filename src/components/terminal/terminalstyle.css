@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap');*/
 
 .terminal {
   position: absolute;
@@ -8,10 +8,9 @@
   font-weight: 300;
   opacity: 0.9;
   color: #ffffff;
-  box-shadow: 4px 4px  teal;
+  box-shadow: 4px 4px teal;
   min-width: 500px;
   transition: all 0.25s ease-out;
-  font-family: 'Roboto Mono', monospace;
 }
 
 .terminal:not(:focus-within) {
@@ -31,7 +30,6 @@
 }
 
 .toggleButton {
-
 }
 
 .terminal-body {

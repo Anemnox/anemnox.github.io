@@ -1,5 +1,5 @@
 export default interface UserData {
-  user: string,
-  hostname: string,
-  dir: string
+  user: string;
+  hostname: string;
+  dir: string;
 }

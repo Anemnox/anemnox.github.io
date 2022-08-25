@@ -1,21 +1,25 @@
-import React from "react";
+import React from 'react';
 
-import "./style.css";
+import resume from "../../static/andrew-resume-2022.pdf";
+
+import './stickyNavStyle.css';
 
 export const StickyNav = (): JSX.Element => {
   return (
     <>
       <section className="navbar-padding"></section>
       <nav className="sticky-navbar">
-        <a className="main-name" href="/#home">ANDREW JANG</a>
-        <div className="navbar-content">
+        <a className="sticky-name" href="/#home">
+          ANDREW JANG
+        </a>
+        <div className="sticky-navbar-content">
           <a href="/#about">ABOUT</a>
           <a href="/#projects">PROJECTS</a>
-          <a href="/#resume">RESUME</a>
+          <a href={resume}>RESUME</a>
         </div>
       </nav>
     </>
   );
-}
+};
 
 export default StickyNav;

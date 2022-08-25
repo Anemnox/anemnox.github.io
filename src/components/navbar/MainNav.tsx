@@ -1,19 +1,23 @@
-import React from "react";
+import React from 'react';
 
-import "./style.css";
+import resume from "../../static/andrew-resume-2022.pdf";
+
+import './mainNavStyle.css';
 
 export const MainNav = (): JSX.Element => {
   return (
     <nav className="main-nav">
-      <a className="main-name" href="/#home">ANDREW JANG</a>
+      <a className="main-nav-name" href="/#home">
+        ANDREW JANG
+      </a>
       <hr />
-      <div className="navbar-content">
+      <div className="main-navbar-content">
         <a href="/#about">ABOUT</a>
         <a href="/#projects">PROJECTS</a>
-        <a href="/#resume">RESUME</a>
+        <a href={resume}>RESUME</a>
       </div>
     </nav>
   );
-}
+};
 
 export default MainNav;

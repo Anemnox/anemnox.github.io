@@ -1,8 +1,10 @@
-import type Command from "../declarations/command";
-import type TerminalInterface from "../declarations/terminalInterface";
+import type Command from '../declarations/command';
+import type TerminalInterface from '../declarations/terminalInterface';
 
-export const error: Command = (terminal: TerminalInterface, args: string[] = []): boolean => {
-
+export const error: Command = (
+  terminal: TerminalInterface,
+  args: string[] = [],
+): boolean => {
   return true;
 };
 

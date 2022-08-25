@@ -1,10 +1,10 @@
-import React from "react";
-import EarthModel from "./EarthModel";
+import { animated, config, useSpring } from '@react-spring/web';
+import React from 'react';
 
-import { useSpring, animated, config } from "@react-spring/web";
+import EarthModel from './EarthModel';
 
-const EarthEaseIn = ({styleName, height, width}) => {
-  const [flip, set] = React.useState(false)
+const EarthEaseIn = ({ styleName, height, width }) => {
+  const [flip, set] = React.useState(false);
 
   let { right } = useSpring({
     to: { right: 0 },
@@ -17,11 +17,10 @@ const EarthEaseIn = ({styleName, height, width}) => {
   });
 
   return (
-    <animated.div className="earth-container" style={{right}} >
+    <animated.div className="earth-container" style={{ right }}>
       <EarthModel styleName={styleName} height={height} width={width} />
     </animated.div>
   );
-}
-
+};
 
 export default EarthEaseIn;

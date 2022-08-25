@@ -1,29 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from 'react';
 
-import TerminalOutput from "../declarations/TerminalOutput";
+import TerminalOutput from '../declarations/TerminalOutput';
 
 const TextClock = (): TerminalOutput => {
   let intervalID: ReturnType<typeof setInterval> | undefined;
-  const [time, setTime]: [string, Function] = useState(new Date().toLocaleString());
+  const [time, setTime]: [string, Function] = useState(
+    new Date().toLocaleString(),
+  );
 
   const tick = () => {
     setTime(new Date().toLocaleString());
-  }
+  };
 
   useEffect(() => {
-    intervalID = setInterval(
-      () => tick(),
-      1000
-    );
+    intervalID = setInterval(() => tick(), 1000);
 
     return function cleanUp() {
       clearInterval(intervalID);
     };
   }, []);
 
-  return (
-    <>{time}</>
-  );
-}
+  return <>{time}</>;
+};
 
 export default TextClock;
