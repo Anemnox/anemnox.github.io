@@ -27,7 +27,7 @@ export const About = (): JSX.Element => {
         </p>
         <p>
           If you're interested in hearing more, I'm available through
-          my <a href="https://www.linkedin.com/in/andrew-jang-187260203/">LinkedIn</a>
+          my <a href="https://www.linkedin.com/in/andrew-k-jang/">LinkedIn</a>
           {" and "}<a href="mailto:a.kyu.jang@gmail.com">email</a>.
         </p>
       </div>
