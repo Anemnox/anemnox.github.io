@@ -1,9 +1,7 @@
 import { FunctionComponent } from "react";
 
 type EarthModelProps = {
-  styleName: ?string;
-  height: number;
-  width: number;
+  className?: string;
 };
 
 const EarthModel: FunctionComponent<EarthModelProps>;

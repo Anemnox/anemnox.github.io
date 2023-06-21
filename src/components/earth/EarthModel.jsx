@@ -94,14 +94,9 @@ const Earth = ({ rotX, rotY }) => {
   );
 };
 
-const EarthModel = ({ styleName, height, width }) => {
+const EarthModel = ({ className }) => {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
-
-  const style = {
-    height: height + 'px',
-    width: width + 'px',
-  };
 
   const handleMove = (event) => {
     if (event.buttons === 1) {
@@ -116,8 +111,7 @@ const EarthModel = ({ styleName, height, width }) => {
 
   return (
     <div
-      className={`earth-backdrop ${styleName}`}
-      style={style}
+      className={`earth-backdrop ${className}`}
       onMouseMove={handleMove}
       role="presentation"
     >

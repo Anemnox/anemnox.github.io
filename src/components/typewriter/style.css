@@ -1,10 +1,10 @@
 /*source: https://css-tricks.com/snippets/css/typewriter-effect/*/
 
 .typewriter-span {
+  
 }
 
 .cursor {
-  border-right: 0.1em solid white;
   animation: caret 1s steps(1) infinite;
 }
 

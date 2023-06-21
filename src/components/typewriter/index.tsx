@@ -4,16 +4,26 @@ import './style.css';
 
 type TypeWriterProps = {
   className: string | undefined;
+  color?: string;
   text: string;
   speed: number;
   callback: Function | undefined;
   isReversed: boolean | undefined;
 };
 
+const colorVariants = {
+  "white": 'cursor border-r-2 border-white',
+  "green": 'cursor border-r-2 border-green-500',
+  "red": 'cursor border-r-2 border-red-500',
+}
+
 const TypeWriter = (props: TypeWriterProps): JSX.Element => {
   const [index, setIndex] = useState(0);
   const indexRef = useRef(index);
+  const cursorColor = props.color ? props.color : "white";
   let length = props.text.length;
+
+
 
   useEffect(() => {
     length = props.text.length;
@@ -38,7 +48,10 @@ const TypeWriter = (props: TypeWriterProps): JSX.Element => {
       {props.isReversed
         ? props.text.substring(0, length - index)
         : props.text.substring(0, index)}
-      <span className="cursor"></span>
+      <span 
+        className={`${colorVariants[cursorColor as keyof typeof colorVariants]}`}
+      >
+      </span>
     </span>
   );
 };

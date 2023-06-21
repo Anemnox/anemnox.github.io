@@ -4,12 +4,16 @@ import * as React from 'react';
 
 //import Terminal from "../components/terminal/Terminal";
 import About from '../components/about';
-import EarthModel from '../components/earth/EarthModel';
+import ArrowButton from '../components/arrow';
+//import EarthModel from '../components/earth/EarthModel';
 import Footer from '../components/footer';
 import { MainNav, StickyNav } from '../components/navbar';
 import type { ProjectData } from '../components/projects';
 import Projects from '../components/projects';
+import SpaceWindow from '../components/spaceWindow';
 import TagLine from '../components/tagline';
+
+import '../styles/global.css';
 import '../styles/pageStyle.css';
 
 type FrontMatter = {
@@ -48,17 +52,16 @@ const IndexPage = (): JSX.Element => {
     }
   `);
 
+  let aboutRef = React.createRef<HTMLDivElement>();
+
   return (
     <>
-      <MainNav />
       <section id="home">
-        <div className="earth-container">
-          <TagLine />
-          <EarthModel styleName="earth" height={1200} width={1200} />
-        </div>
+        <SpaceWindow />
+        <ArrowButton onClick={() => aboutRef.current?.scrollIntoView()}/>
       </section>
       <StickyNav />
-      <About />
+      <About innerRef={aboutRef} />
       <Projects projects={convertToProjectData(allMarkdownRemark.nodes)} />
       <Footer />
     </>
@@ -82,7 +85,7 @@ function convertToProjectData(data: MarkdownNodeData[]): ProjectData[] {
 export default IndexPage;
 
 export function Head(): JSX.Element {
-  return (
+  return (  
     <>
       <title>Andrew Jang</title>
       <meta name="description" content="Andrew Jang's personal website!" />

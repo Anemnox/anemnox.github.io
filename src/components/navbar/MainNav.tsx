@@ -1,6 +1,6 @@
 import React from 'react';
 
-import resume from "../../static/andrew-resume-2022.pdf";
+import resume from "../../static/JangResume.pdf";
 
 import './mainNavStyle.css';
 
