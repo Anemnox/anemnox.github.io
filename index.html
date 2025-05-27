@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Andrew Jang&#x27;s personal website!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Andrew Jang
+    </title>
+    <script type="module" crossorigin src="/assets/index-DPgJiJ-y.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CtXnWAPC.css">
+  </head>
+  <body>
+    <canvas id="solarCanvas" class="h-screen min-h-[600px] absolute grayscale-35 bg-gray-950 top-0 left-0 w-full -z-10 pointer-events-none"></canvas>
+
+    <section class="h-screen min-h-[600px] text-white flex flex-col justify-center items-center text-center">
+      <div class="absolute top-5 right-5 text-right">
+        <h1 class="text-4xl font-bold">ANDREW JANG</h1>
+        <p clas="text-2xl"> Software Developer</p>
+      </div>
+      <h1 class="text-4xl font-bold">Engineering Solutions with Curiosity</h1>
+      <p class="mt-4 text-lg text-gray-400">ML · Cloud · Web · Mobile</p>
+    </section>
+
+    <div id="page-contents">
+      <header class="sticky top-0 left-0 w-full z-50 bg-gray-950 text-white shadow overflow-x-clip">
+        <div class="relative h-16 flex items-center px-6">
+          <nav class="w-full flex text-sm justify-around font-medium">
+            <a href="#introduction" class="hover:text-cyan-400">Introduction</a>
+            <a href="#technologies" class="hover:text-cyan-400">Technologies</a>
+            <a href="#projects" class="hover:text-cyan-400">Projects</a>
+          </nav>
+          
+          <div class="absolute bottom-0 left-0 h-1 bg-red-700" id="scroll-progress" style="width: 0%">
+            <div class="absolute w-16 h-12 overflow-visible -mt-5 right-0 rotate-45">
+              <img src="/rocket.svg" alt="rocket" class="w-full h-full block" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="introduction" class="min-h-screen flex flex-col flex-col-reverse md:flex-row justify-center md:justify-around items-center">
+        <div class="w-3/4 md:w-1/2">
+          <h1 class="text-4xl font-bold my-4">Introduction</h1>
+          <p class="text-justify">
+            I'm a passionate developer with experience across full-stack web development, backend systems, and AI-powered
+            applications. I build projects that combine creative thinking, system architecture, and problem-solving, with
+            features like AI integration, user authentication, and tooling for containerization.
+          </p>
+        </div>
+        <img class="w-3/4 md:w-1/4 rounded-sm" src="/profile.jpeg" alt="profile picture"/>
+      </section>
+      <section id="technologies" class="min-h-screen flex flex-col md:flex-row justify-center md:justify-around items-center">
+        <div id="chart" class="flex justify-center items-center w-3/4 md:w-1/3"></div>
+        <div class="w-3/4 md:w-1/3">
+          <h1 id="tech-title" class="text-4xl font-bold my-4">Technologies</h1>
+          <h2 id="tech-subtitle" class="text-2xl mb-2 font-bold text-gray-400"></h2>
+          <p id="tech-desc" class="text-justify">
+            Over the years, I have gained hands-on experience with a diverse set of programming languages and technologies
+            across multiple domains. This broad technical foundation allows me to adapt quickly, choose the right tools for
+            the task, and contribute effectively across the stack.
+          </p>
+          <p class="my-2 font-bold text-gray-700">
+            Select a section on the graph to learn more.
+          </p>
+        </div>
+      </section>
+      <section id="projects" class="min-h-screen flex flex-col justify-center items-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Featured Projects</h2>
+        
+        <div class="flex flex-col justify-around gap-4 mx-10">
+          <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">
+              <a href="https://github.com/Anemnox/CloudParallelism" target="_blank" class="hover:underline">
+                Cloud Parallelism
+              </a>
+            </h3>
+            <p class="text-sm text-gray-500 mb-2">Python • AWS SageMaker • smdistributed</p>
+            <p class="text-gray-700">
+              Designed and tested distributed training workflows using AWS SageMaker to optimize GPU usage and cost-efficiency for large-scale ML tasks.
+            </p>
+          </div>
+          
+          <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">
+              Predicting Personalities with Image Data
+            </h3>
+            <p class="text-sm text-gray-500 mb-2">Python • Keras • OpenCV</p>
+            <p class="text-gray-700">
+              Built and trained a CNN to analyze facial images and predict personality traits, exploring the link between visual cues and psychological profiles.
+            </p>
+          </div>
+          
+          <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">
+              <a href="https://anemnox.github.io/BootlegPhysics/" target="_blank" class="hover:underline">
+                Three.js Physics Engine
+              </a>
+            </h3>
+            <p class="text-sm text-gray-500 mb-2">JavaScript • Three.js</p>
+            <p class="text-gray-700">
+              Developed a browser-based simulation with a custom physics engine and 3D rendering, demonstrating motion, collisions, and dynamic forces.
+            </p>
+          </div>
+          
+          <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">
+              <a href="https://github.com/uwrov/DARPA-FFT-Challenge/" target="_blank" class="hover:underline">
+                DARPA: Forecasting Floats in Turbulence
+              </a>
+            </h3>
+            <p class="text-sm text-gray-500 mb-2">Python • PyTorch</p>
+            <p class="text-gray-700">
+              Contributed to DARPA's challenge by developing machine learning models to predict drifting patterns of ocean floats in highly turbulent conditions.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="p-5 text-center gr">
+      <hr class="m-auto p-2 w-6/7 border-stone-400"/>
+      <p>© 2025 by Andrew Jang</p>
+    </footer>
+  </body>
+</html>
