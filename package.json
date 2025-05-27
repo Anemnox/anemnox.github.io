@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "vite": "^6.3.5"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "Andrew Jang",
+  "license": "CC-BY-NC-ND",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.7",
+    "d3": "^7.9.0",
+    "tailwindcss": "^4.1.7"
+  },
+  "homepage": "https://anemnox.github.io/",
+  "description": "Andrew Jang's Personal Website"
+}
